@@ -21,23 +21,24 @@ create table RecipeIngredient (recipe_id INT NOT NULL, ingredient_id INT NOT NUL
   
   /* With the schema created, we can insert rows (aka records) of data in to the tables.  This is the "Create" part of CRUD.  Notice that the RecipeIngredient table is full of foreign keys, meaning that this table maps all the other tables together. */	
 
+/* add measurements for ingredient list*/
 INSERT INTO Measure (name) VALUES('CUP'), ('TEASPOON'), ('TABLESPOON'), ('WHOLE');
-/* SQL lab - 3 new recipes*/
-INSERT INTO Measure (name) VALUES
-INSERT INTO Measure (name) VALUES
-INSERT INTO Measure (name) VALUES
+INSERT INTO Measure (name) VALUES('CUP'), ('TEASPOON'), ('TABLESPOON'), ('WHOLE');
+INSERT INTO Measure (name) VALUES('SLICE'), ('POUND'), ('CUP');   
+INSERT INTO Measure (name) VALUES('POUND'), ('CUP'), ('CUP'), ('CUP'); 
+INSERT INTO Measure (name) VALUES('CAN'), ('CAN'), ('JAR'); 
 
 /*add ingredients needed for each recipe. */
 INSERT INTO Ingredient (name) VALUES('egg'), ('salt'), ('sugar'), ('chocolate'), ('vanilla extract'), ('flour');
 INSERT INTO Ingredient (name) VALUES('bread'), ('roast beef'), ('gravy'); 
-INSERT INTO Ingredient (name) VALUES('noodes'), ('cheese'), ('milk'), ('water');
+INSERT INTO Ingredient (name) VALUES('noodles'), ('cheese'), ('milk'), ('water');
 INSERT INTO Ingredient (name) VALUES('green beans'), ('cream of mushroom'), ('french onions');
 
 /*add general information and cooking instructions needed for each recipe. */
 INSERT INTO Recipe (name, description, instructions) VALUES('Boiled Egg', 'A single boiled egg', 'Add egg to cold water. Bring water to boil. Cook.');
 INSERT INTO Recipe (name, description, instructions) VALUES('Chocolate Cake', 'Yummy cake', 'Add eggs, flour, chocolate to pan. Bake at 350 for 1 hour');
-INSERT INTO Recipe (name, description, instructions) VALUES('open roasted beef sandwich', 'bread topped with roast beef followed by gravy', '');
-INSERT INTO Recipe (name, description, instructions) VALUES('mac n cheese', 'noodles with cheese liquid sauce', '');
+INSERT INTO Recipe (name, description, instructions) VALUES('open roasted beef sandwich', 'bread topped with roast beef followed by gravy', 'make gravy. simmer roast beek until soft. place bread on plate, then roast beef on bread and gravy on top');
+INSERT INTO Recipe (name, description, instructions) VALUES('mac n cheese', 'noodles with cheese liquid sauce', 'boil noodles in water until soft. add cheese and milk. cook for 5 extra minutes.');
 INSERT INTO Recipe (name, description, instructions) VALUES('green bean casserole', 'combination of green beans, cream of mushroom, and french onions', '');
 
 /* establishes connection between the tables*/
